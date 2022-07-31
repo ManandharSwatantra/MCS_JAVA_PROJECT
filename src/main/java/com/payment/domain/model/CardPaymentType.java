@@ -24,14 +24,10 @@ public enum CardPaymentType {
     }
 
     public static CardPaymentType valueOf(int cardPaymentType) {
-        if(map.containsKey(cardPaymentType)) {
-            return  map.get(cardPaymentType);
+        if (map.containsKey(cardPaymentType)) {
+            return map.get(cardPaymentType);
         }
         throw new PaymentTypeNotFoundException("The Card Payment type with number " +
                 cardPaymentType + " is not provided at the moment.");
-    }
-
-    public int getValue() {
-        return value;
     }
 }

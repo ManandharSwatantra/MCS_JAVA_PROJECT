@@ -22,8 +22,8 @@ public enum PaymentType {
     }
 
     public static PaymentType valueOf(int paymentType) {
-        if(map.containsKey(paymentType)) {
-            return  map.get(paymentType);
+        if (map.containsKey(paymentType)) {
+            return map.get(paymentType);
         }
         throw new PaymentTypeNotFoundException("The Payment type with number " +
                 paymentType + " is not provided at the moment.");

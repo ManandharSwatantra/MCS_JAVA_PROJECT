@@ -11,7 +11,7 @@ public class CardPaymentSurchargeAdapter implements PaymentSurcharge {
     @Override
     public SurchargeResponse calculateSurcharge(double amount) {
         var intCardType = InputUtil.inputIntValue("From which card will you pay?\n" +
-                "-------------------------------\n" +
+                "-----------------------------------------\n" +
                 "Enter 1 for  Master Card\n" +
                 "Enter 2 for  Visit Card\n" +
                 "Enter 3 for  Amex Card\n" +
@@ -30,7 +30,7 @@ public class CardPaymentSurchargeAdapter implements PaymentSurcharge {
             case AMEX_CARD:
                 return (amount * 3) / 100;
             case GIFT_CARD:
-                return amount;
+                return 0.0;
         }
         return amount;
     }

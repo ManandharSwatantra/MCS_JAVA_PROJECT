@@ -15,24 +15,12 @@ public class SurchargeResponse {
         return surchargeAmt;
     }
 
-    public void setSurchargeAmt(double surchargeAmt) {
-        this.surchargeAmt = surchargeAmt;
-    }
-
     public String getPaymentType() {
         return paymentType;
     }
 
-    public void setPaymentType(String paymentType) {
-        this.paymentType = paymentType;
-    }
-
     public String getPaymentSubType() {
         return paymentSubType;
-    }
-
-    public void setPaymentSubType(String paymentSubType) {
-        this.paymentSubType = paymentSubType;
     }
 
     public static SurchargeResponse with(double surchargeAmount, String paymentType, String paymentSubType) {

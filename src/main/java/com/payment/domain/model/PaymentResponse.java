@@ -21,62 +21,6 @@ public class PaymentResponse {
         this.originalAmount = originalAmount;
     }
 
-    public double getDeliveryCharge() {
-        return deliveryCharge;
-    }
-
-    public void setDeliveryCharge(double deliveryCharge) {
-        this.deliveryCharge = deliveryCharge;
-    }
-
-    public double getTotalAmount() {
-        return totalAmount;
-    }
-
-    public void setTotalAmount(double totalAmount) {
-        this.totalAmount = totalAmount;
-    }
-
-    public double getSurcharge() {
-        return surcharge;
-    }
-
-    public void setSurcharge(double surcharge) {
-        this.surcharge = surcharge;
-    }
-
-    public String getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(String createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public PaymentType getPaymentType() {
-        return paymentType;
-    }
-
-    public void setPaymentType(PaymentType paymentType) {
-        this.paymentType = paymentType;
-    }
-
-    public String getPaymentSubType() {
-        return paymentSubType;
-    }
-
-    public void setPaymentSubType(String paymentSubType) {
-        this.paymentSubType = paymentSubType;
-    }
-
-    public double getOriginalAmount() {
-        return originalAmount;
-    }
-
-    public void setOriginalAmount(double originalAmount) {
-        this.originalAmount = originalAmount;
-    }
-
     public static PaymentResponse with(double deliveryCharge,
                                        double totalAmount,
                                        double surcharge,
@@ -96,11 +40,10 @@ public class PaymentResponse {
         return new PaymentResponse(deliveryCharge, totalAmount, surcharge, createdAt, paymentType, null, originalAmount);
     }
 
-
     @Override
     public String toString() {
         var string = "You got payment Response with \n" +
-                "--------------------------------------\n" +
+                "-----------------------------------------\n" +
                 " Input Amount =" + originalAmount +
                 ", \n Delivery Charge = " + deliveryCharge +
                 ", \n Total Amount = " + totalAmount +
