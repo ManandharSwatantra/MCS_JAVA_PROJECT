@@ -44,12 +44,12 @@ public class PaymentResponse {
     public String toString() {
         var string = "You got payment Response with \n" +
                 "-----------------------------------------\n" +
-                " Input Amount =" + originalAmount +
+                " Date = " + createdAt +
+                "  \n Input Amount = " + originalAmount +
                 ", \n Delivery Charge = " + deliveryCharge +
-                ", \n Total Amount = " + totalAmount +
+                ", \n Payment Type = " + paymentType +
                 ", \n Surcharge = " + surcharge +
-                ", \n Date = " + createdAt +
-                ", \n Payment Type = " + paymentType;
+                ", \n Total Amount = " + totalAmount;
         if (this.paymentType == PaymentType.CARD)
             return string + "\n Payment SubType = " + paymentSubType;
         return string;
